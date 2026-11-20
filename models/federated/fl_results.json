@@ -1,0 +1,700 @@
+{
+  "simulation_timestamp": "2026-06-14T02:25:06.421708",
+  "simulation_duration_seconds": 56.9,
+  "num_rounds": 3,
+  "num_rounds_planned": 3,
+  "simulation_in_progress": false,
+  "num_clients": 3,
+  "clients": [
+    {
+      "client_id": "client_a",
+      "facility_name": "Hosur Test Cell 1",
+      "city": "Hosur",
+      "state": "Tamil Nadu",
+      "elevation_m": 350,
+      "description": "High humidity facility \u2014 monsoon season effects",
+      "best_model_type": "xgboost",
+      "model_scores": {
+        "random_forest": 1.0,
+        "xgboost": 1.0,
+        "neural_network": 1.0
+      },
+      "train_samples": 10080,
+      "val_samples": 2160,
+      "test_samples": 2160,
+      "round_number": 3,
+      "is_trained": true,
+      "overrepresented_scenario": "CAC_Direct_Leak",
+      "metrics": {
+        "val_f1_by_model": {
+          "random_forest": 1.0,
+          "xgboost": 1.0,
+          "neural_network": 1.0
+        },
+        "leak_location_f1": 1.0,
+        "client_id": "client_a",
+        "facility_name": "Hosur Test Cell 1",
+        "city": "Hosur",
+        "best_model_type": "xgboost",
+        "label": "test",
+        "leak_present_f1": 0.9988864825685548,
+        "leak_severity_f1": 1.0,
+        "recommended_action_f1": 1.0,
+        "per_scenario_f1": {
+          "Normal": null,
+          "Intake_PreTurbo": 1.0,
+          "Intake_PostTurbo_CAC": 1.0,
+          "Exhaust_PreTurbine": 1.0,
+          "Exhaust_PostTurbine": 1.0,
+          "EGR_Leak": 1.0,
+          "CAC_Direct_Leak": 1.0,
+          "Minor_Intake_Leak": 1.0
+        }
+      }
+    },
+    {
+      "client_id": "client_b",
+      "facility_name": "Hosur Test Cell 2",
+      "city": "Hosur",
+      "state": "Tamil Nadu",
+      "elevation_m": 350,
+      "description": "Standard reference facility \u2014 largest dataset",
+      "best_model_type": "xgboost",
+      "model_scores": {
+        "random_forest": 1.0,
+        "xgboost": 1.0,
+        "neural_network": 1.0
+      },
+      "train_samples": 12600,
+      "val_samples": 2700,
+      "test_samples": 2700,
+      "round_number": 3,
+      "is_trained": true,
+      "overrepresented_scenario": "EGR_Leak",
+      "metrics": {
+        "val_f1_by_model": {
+          "random_forest": 1.0,
+          "xgboost": 1.0,
+          "neural_network": 1.0
+        },
+        "leak_location_f1": 1.0,
+        "client_id": "client_b",
+        "facility_name": "Hosur Test Cell 2",
+        "city": "Hosur",
+        "best_model_type": "xgboost",
+        "label": "test",
+        "leak_present_f1": 1.0,
+        "leak_severity_f1": 1.0,
+        "recommended_action_f1": 1.0,
+        "per_scenario_f1": {
+          "Normal": null,
+          "Intake_PreTurbo": 1.0,
+          "Intake_PostTurbo_CAC": 1.0,
+          "Exhaust_PreTurbine": 1.0,
+          "Exhaust_PostTurbine": 1.0,
+          "EGR_Leak": 1.0,
+          "CAC_Direct_Leak": 1.0,
+          "Minor_Intake_Leak": 1.0
+        }
+      }
+    },
+    {
+      "client_id": "client_c",
+      "facility_name": "Pune Test Cell",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "elevation_m": 560,
+      "description": "High altitude facility \u2014 reduced ambient pressure",
+      "best_model_type": "xgboost",
+      "model_scores": {
+        "random_forest": 1.0,
+        "xgboost": 1.0,
+        "neural_network": 1.0
+      },
+      "train_samples": 7560,
+      "val_samples": 1620,
+      "test_samples": 1620,
+      "round_number": 3,
+      "is_trained": true,
+      "overrepresented_scenario": "Exhaust_PreTurbine",
+      "metrics": {
+        "val_f1_by_model": {
+          "random_forest": 1.0,
+          "xgboost": 1.0,
+          "neural_network": 1.0
+        },
+        "leak_location_f1": 1.0,
+        "client_id": "client_c",
+        "facility_name": "Pune Test Cell",
+        "city": "Pune",
+        "best_model_type": "xgboost",
+        "label": "test",
+        "leak_present_f1": 1.0,
+        "leak_severity_f1": 1.0,
+        "recommended_action_f1": 1.0,
+        "per_scenario_f1": {
+          "Normal": null,
+          "Intake_PreTurbo": 1.0,
+          "Intake_PostTurbo_CAC": 1.0,
+          "Exhaust_PreTurbine": 1.0,
+          "Exhaust_PostTurbine": 1.0,
+          "EGR_Leak": 1.0,
+          "CAC_Direct_Leak": 1.0,
+          "Minor_Intake_Leak": 1.0
+        }
+      }
+    }
+  ],
+  "local_metrics_before_fl": [
+    {
+      "client_id": "client_a",
+      "facility_name": "Hosur Test Cell 1",
+      "city": "Hosur",
+      "best_model_type": "xgboost",
+      "label": "test",
+      "leak_present_f1": 0.9988864825685548,
+      "leak_location_f1": 1.0,
+      "leak_severity_f1": 1.0,
+      "recommended_action_f1": 1.0,
+      "per_scenario_f1": {
+        "Normal": null,
+        "Intake_PreTurbo": 1.0,
+        "Intake_PostTurbo_CAC": 1.0,
+        "Exhaust_PreTurbine": 1.0,
+        "Exhaust_PostTurbine": 1.0,
+        "EGR_Leak": 1.0,
+        "CAC_Direct_Leak": 1.0,
+        "Minor_Intake_Leak": 1.0
+      }
+    },
+    {
+      "client_id": "client_b",
+      "facility_name": "Hosur Test Cell 2",
+      "city": "Hosur",
+      "best_model_type": "xgboost",
+      "label": "test",
+      "leak_present_f1": 1.0,
+      "leak_location_f1": 1.0,
+      "leak_severity_f1": 1.0,
+      "recommended_action_f1": 1.0,
+      "per_scenario_f1": {
+        "Normal": null,
+        "Intake_PreTurbo": 1.0,
+        "Intake_PostTurbo_CAC": 1.0,
+        "Exhaust_PreTurbine": 1.0,
+        "Exhaust_PostTurbine": 1.0,
+        "EGR_Leak": 1.0,
+        "CAC_Direct_Leak": 1.0,
+        "Minor_Intake_Leak": 1.0
+      }
+    },
+    {
+      "client_id": "client_c",
+      "facility_name": "Pune Test Cell",
+      "city": "Pune",
+      "best_model_type": "xgboost",
+      "label": "test",
+      "leak_present_f1": 1.0,
+      "leak_location_f1": 1.0,
+      "leak_severity_f1": 1.0,
+      "recommended_action_f1": 1.0,
+      "per_scenario_f1": {
+        "Normal": null,
+        "Intake_PreTurbo": 1.0,
+        "Intake_PostTurbo_CAC": 1.0,
+        "Exhaust_PreTurbine": 1.0,
+        "Exhaust_PostTurbine": 1.0,
+        "EGR_Leak": 1.0,
+        "CAC_Direct_Leak": 1.0,
+        "Minor_Intake_Leak": 1.0
+      }
+    }
+  ],
+  "final_metrics_after_fl": [
+    {
+      "client_id": "client_a",
+      "facility_name": "Hosur Test Cell 1",
+      "city": "Hosur",
+      "best_model_type": "xgboost",
+      "label": "test_post_fl",
+      "leak_present_f1": 0.9988864825685548,
+      "leak_location_f1": 1.0,
+      "leak_severity_f1": 1.0,
+      "recommended_action_f1": 1.0,
+      "per_scenario_f1": {
+        "Normal": null,
+        "Intake_PreTurbo": 1.0,
+        "Intake_PostTurbo_CAC": 1.0,
+        "Exhaust_PreTurbine": 1.0,
+        "Exhaust_PostTurbine": 1.0,
+        "EGR_Leak": 1.0,
+        "CAC_Direct_Leak": 1.0,
+        "Minor_Intake_Leak": 1.0
+      }
+    },
+    {
+      "client_id": "client_b",
+      "facility_name": "Hosur Test Cell 2",
+      "city": "Hosur",
+      "best_model_type": "xgboost",
+      "label": "test_post_fl",
+      "leak_present_f1": 1.0,
+      "leak_location_f1": 1.0,
+      "leak_severity_f1": 1.0,
+      "recommended_action_f1": 1.0,
+      "per_scenario_f1": {
+        "Normal": null,
+        "Intake_PreTurbo": 1.0,
+        "Intake_PostTurbo_CAC": 1.0,
+        "Exhaust_PreTurbine": 1.0,
+        "Exhaust_PostTurbine": 1.0,
+        "EGR_Leak": 1.0,
+        "CAC_Direct_Leak": 1.0,
+        "Minor_Intake_Leak": 1.0
+      }
+    },
+    {
+      "client_id": "client_c",
+      "facility_name": "Pune Test Cell",
+      "city": "Pune",
+      "best_model_type": "xgboost",
+      "label": "test_post_fl",
+      "leak_present_f1": 1.0,
+      "leak_location_f1": 1.0,
+      "leak_severity_f1": 1.0,
+      "recommended_action_f1": 1.0,
+      "per_scenario_f1": {
+        "Normal": null,
+        "Intake_PreTurbo": 1.0,
+        "Intake_PostTurbo_CAC": 1.0,
+        "Exhaust_PreTurbine": 1.0,
+        "Exhaust_PostTurbine": 1.0,
+        "EGR_Leak": 1.0,
+        "CAC_Direct_Leak": 1.0,
+        "Minor_Intake_Leak": 1.0
+      }
+    }
+  ],
+  "round_history": [
+    {
+      "round": 0,
+      "timestamp": "2026-06-14T02:24:15.954689",
+      "sample_weights": {
+        "client_a": 0.3333,
+        "client_b": 0.4167,
+        "client_c": 0.25
+      },
+      "per_client_before": {
+        "client_a": {
+          "client_id": "client_a",
+          "facility_name": "Hosur Test Cell 1",
+          "city": "Hosur",
+          "best_model_type": "xgboost",
+          "label": "shared_before",
+          "leak_present_f1": 0.6875358284176072,
+          "leak_location_f1": 0.9404806903171602,
+          "leak_severity_f1": 0.8312828158277155,
+          "recommended_action_f1": 0.8312828158277155,
+          "per_scenario_f1": {
+            "Normal": null,
+            "Intake_PreTurbo": 1.0,
+            "Intake_PostTurbo_CAC": 1.0,
+            "Exhaust_PreTurbine": 0.9953703703703703,
+            "Exhaust_PostTurbine": 1.0,
+            "EGR_Leak": 1.0,
+            "CAC_Direct_Leak": 1.0,
+            "Minor_Intake_Leak": 0.9940119760479041
+          }
+        },
+        "client_b": {
+          "client_id": "client_b",
+          "facility_name": "Hosur Test Cell 2",
+          "city": "Hosur",
+          "best_model_type": "random_forest",
+          "label": "shared_before",
+          "leak_present_f1": 0.9677397081179346,
+          "leak_location_f1": 1.0,
+          "leak_severity_f1": 1.0,
+          "recommended_action_f1": 1.0,
+          "per_scenario_f1": {
+            "Normal": null,
+            "Intake_PreTurbo": 1.0,
+            "Intake_PostTurbo_CAC": 1.0,
+            "Exhaust_PreTurbine": 1.0,
+            "Exhaust_PostTurbine": 1.0,
+            "EGR_Leak": 1.0,
+            "CAC_Direct_Leak": 1.0,
+            "Minor_Intake_Leak": 1.0
+          }
+        },
+        "client_c": {
+          "client_id": "client_c",
+          "facility_name": "Pune Test Cell",
+          "city": "Pune",
+          "best_model_type": "xgboost",
+          "label": "shared_before",
+          "leak_present_f1": 0.882355516158333,
+          "leak_location_f1": 0.9986709510854478,
+          "leak_severity_f1": 0.9791584780438201,
+          "recommended_action_f1": 0.9791584780438201,
+          "per_scenario_f1": {
+            "Normal": null,
+            "Intake_PreTurbo": 1.0,
+            "Intake_PostTurbo_CAC": 1.0,
+            "Exhaust_PreTurbine": 1.0,
+            "Exhaust_PostTurbine": 1.0,
+            "EGR_Leak": 1.0,
+            "CAC_Direct_Leak": 1.0,
+            "Minor_Intake_Leak": 0.9880239520958084
+          }
+        }
+      },
+      "global_after": {
+        "leak_location_f1": 0.9951146011839851,
+        "leak_present_f1": 0.8846373515257498,
+        "leak_severity_f1": 0.929559112085569,
+        "per_scenario_f1": {
+          "Normal": null,
+          "Intake_PreTurbo": 1.0,
+          "Intake_PostTurbo_CAC": 1.0,
+          "Exhaust_PreTurbine": 1.0,
+          "Exhaust_PostTurbine": 1.0,
+          "EGR_Leak": 1.0,
+          "CAC_Direct_Leak": 1.0,
+          "Minor_Intake_Leak": 1.0
+        },
+        "model_used": "xgboost_fedavg"
+      },
+      "improvement_over_best_local": -0.0048853988160149076,
+      "per_client_improvement": {
+        "client_a": 0.0546339108668249,
+        "client_b": -0.0048853988160149076,
+        "client_c": -0.0035563499014626965
+      }
+    },
+    {
+      "round": 1,
+      "timestamp": "2026-06-14T02:24:31.279954",
+      "sample_weights": {
+        "client_a": 0.3333,
+        "client_b": 0.4167,
+        "client_c": 0.25
+      },
+      "per_client_before": {
+        "client_a": {
+          "client_id": "client_a",
+          "facility_name": "Hosur Test Cell 1",
+          "city": "Hosur",
+          "best_model_type": "xgboost",
+          "label": "shared_before",
+          "leak_present_f1": 0.7033133202748658,
+          "leak_location_f1": 0.9289664849486776,
+          "leak_severity_f1": 0.8399668711152871,
+          "recommended_action_f1": 0.8399668711152873,
+          "per_scenario_f1": {
+            "Normal": null,
+            "Intake_PreTurbo": 1.0,
+            "Intake_PostTurbo_CAC": 1.0,
+            "Exhaust_PreTurbine": 1.0,
+            "Exhaust_PostTurbine": 1.0,
+            "EGR_Leak": 1.0,
+            "CAC_Direct_Leak": 1.0,
+            "Minor_Intake_Leak": 1.0
+          }
+        },
+        "client_b": {
+          "client_id": "client_b",
+          "facility_name": "Hosur Test Cell 2",
+          "city": "Hosur",
+          "best_model_type": "xgboost",
+          "label": "shared_before",
+          "leak_present_f1": 0.8089664819117479,
+          "leak_location_f1": 0.963192634547584,
+          "leak_severity_f1": 0.92261896992997,
+          "recommended_action_f1": 0.92261896992997,
+          "per_scenario_f1": {
+            "Normal": null,
+            "Intake_PreTurbo": 1.0,
+            "Intake_PostTurbo_CAC": 0.9826589595375722,
+            "Exhaust_PreTurbine": 0.9629629629629629,
+            "Exhaust_PostTurbine": 0.9565217391304348,
+            "EGR_Leak": 1.0,
+            "CAC_Direct_Leak": 0.9735449735449735,
+            "Minor_Intake_Leak": 0.9401197604790419
+          }
+        },
+        "client_c": {
+          "client_id": "client_c",
+          "facility_name": "Pune Test Cell",
+          "city": "Pune",
+          "best_model_type": "xgboost",
+          "label": "shared_before",
+          "leak_present_f1": 0.8763211732998026,
+          "leak_location_f1": 1.0,
+          "leak_severity_f1": 0.9977424108458591,
+          "recommended_action_f1": 0.9977424108458591,
+          "per_scenario_f1": {
+            "Normal": null,
+            "Intake_PreTurbo": 1.0,
+            "Intake_PostTurbo_CAC": 1.0,
+            "Exhaust_PreTurbine": 1.0,
+            "Exhaust_PostTurbine": 1.0,
+            "EGR_Leak": 1.0,
+            "CAC_Direct_Leak": 1.0,
+            "Minor_Intake_Leak": 1.0
+          }
+        }
+      },
+      "global_after": {
+        "leak_location_f1": 0.9965397612646616,
+        "leak_present_f1": 0.8645357108733978,
+        "leak_severity_f1": 0.9782651946426699,
+        "per_scenario_f1": {
+          "Normal": null,
+          "Intake_PreTurbo": 1.0,
+          "Intake_PostTurbo_CAC": 1.0,
+          "Exhaust_PreTurbine": 1.0,
+          "Exhaust_PostTurbine": 1.0,
+          "EGR_Leak": 1.0,
+          "CAC_Direct_Leak": 1.0,
+          "Minor_Intake_Leak": 1.0
+        },
+        "model_used": "xgboost_fedavg"
+      },
+      "improvement_over_best_local": -0.0034602387353384056,
+      "per_client_improvement": {
+        "client_a": 0.06757327631598398,
+        "client_b": 0.033347126717077624,
+        "client_c": -0.0034602387353384056
+      }
+    },
+    {
+      "round": 2,
+      "timestamp": "2026-06-14T02:25:06.344058",
+      "sample_weights": {
+        "client_a": 0.3333,
+        "client_b": 0.4167,
+        "client_c": 0.25
+      },
+      "per_client_before": {
+        "client_a": {
+          "client_id": "client_a",
+          "facility_name": "Hosur Test Cell 1",
+          "city": "Hosur",
+          "best_model_type": "xgboost",
+          "label": "shared_before",
+          "leak_present_f1": 0.6996996996996997,
+          "leak_location_f1": 0.9358717297634902,
+          "leak_severity_f1": 0.8435600290847752,
+          "recommended_action_f1": 0.8435600290847752,
+          "per_scenario_f1": {
+            "Normal": null,
+            "Intake_PreTurbo": 1.0,
+            "Intake_PostTurbo_CAC": 1.0,
+            "Exhaust_PreTurbine": 1.0,
+            "Exhaust_PostTurbine": 1.0,
+            "EGR_Leak": 1.0,
+            "CAC_Direct_Leak": 1.0,
+            "Minor_Intake_Leak": 1.0
+          }
+        },
+        "client_b": {
+          "client_id": "client_b",
+          "facility_name": "Hosur Test Cell 2",
+          "city": "Hosur",
+          "best_model_type": "xgboost",
+          "label": "shared_before",
+          "leak_present_f1": 0.8899759211671152,
+          "leak_location_f1": 0.9772339016515756,
+          "leak_severity_f1": 0.9220840934427089,
+          "recommended_action_f1": 0.9220840934427089,
+          "per_scenario_f1": {
+            "Normal": null,
+            "Intake_PreTurbo": 1.0,
+            "Intake_PostTurbo_CAC": 0.976878612716763,
+            "Exhaust_PreTurbine": 1.0,
+            "Exhaust_PostTurbine": 1.0,
+            "EGR_Leak": 1.0,
+            "CAC_Direct_Leak": 1.0,
+            "Minor_Intake_Leak": 1.0
+          }
+        },
+        "client_c": {
+          "client_id": "client_c",
+          "facility_name": "Pune Test Cell",
+          "city": "Pune",
+          "best_model_type": "xgboost",
+          "label": "shared_before",
+          "leak_present_f1": 0.8966133024217551,
+          "leak_location_f1": 1.0,
+          "leak_severity_f1": 0.9993534609479434,
+          "recommended_action_f1": 0.9993534609479434,
+          "per_scenario_f1": {
+            "Normal": null,
+            "Intake_PreTurbo": 1.0,
+            "Intake_PostTurbo_CAC": 1.0,
+            "Exhaust_PreTurbine": 1.0,
+            "Exhaust_PostTurbine": 1.0,
+            "EGR_Leak": 1.0,
+            "CAC_Direct_Leak": 1.0,
+            "Minor_Intake_Leak": 1.0
+          }
+        }
+      },
+      "global_after": {
+        "leak_location_f1": 0.9965397612646616,
+        "leak_present_f1": 0.8716525959883009,
+        "leak_severity_f1": 0.981615370822829,
+        "per_scenario_f1": {
+          "Normal": null,
+          "Intake_PreTurbo": 1.0,
+          "Intake_PostTurbo_CAC": 1.0,
+          "Exhaust_PreTurbine": 1.0,
+          "Exhaust_PostTurbine": 1.0,
+          "EGR_Leak": 1.0,
+          "CAC_Direct_Leak": 1.0,
+          "Minor_Intake_Leak": 1.0
+        },
+        "model_used": "xgboost_fedavg"
+      },
+      "improvement_over_best_local": -0.0034602387353384056,
+      "per_client_improvement": {
+        "client_a": 0.06066803150117139,
+        "client_b": 0.01930585961308595,
+        "client_c": -0.0034602387353384056
+      }
+    }
+  ],
+  "cross_facility_before": {
+    "per_client": {
+      "client_a": {
+        "client_id": "client_a",
+        "facility_name": "Hosur Test Cell 1",
+        "city": "Hosur",
+        "best_model_type": "xgboost",
+        "label": "shared_before",
+        "leak_present_f1": 0.6875358284176072,
+        "leak_location_f1": 0.9404806903171602,
+        "leak_severity_f1": 0.8312828158277155,
+        "recommended_action_f1": 0.8312828158277155,
+        "per_scenario_f1": {
+          "Normal": null,
+          "Intake_PreTurbo": 1.0,
+          "Intake_PostTurbo_CAC": 1.0,
+          "Exhaust_PreTurbine": 0.9953703703703703,
+          "Exhaust_PostTurbine": 1.0,
+          "EGR_Leak": 1.0,
+          "CAC_Direct_Leak": 1.0,
+          "Minor_Intake_Leak": 0.9940119760479041
+        }
+      },
+      "client_b": {
+        "client_id": "client_b",
+        "facility_name": "Hosur Test Cell 2",
+        "city": "Hosur",
+        "best_model_type": "random_forest",
+        "label": "shared_before",
+        "leak_present_f1": 0.9677397081179346,
+        "leak_location_f1": 1.0,
+        "leak_severity_f1": 1.0,
+        "recommended_action_f1": 1.0,
+        "per_scenario_f1": {
+          "Normal": null,
+          "Intake_PreTurbo": 1.0,
+          "Intake_PostTurbo_CAC": 1.0,
+          "Exhaust_PreTurbine": 1.0,
+          "Exhaust_PostTurbine": 1.0,
+          "EGR_Leak": 1.0,
+          "CAC_Direct_Leak": 1.0,
+          "Minor_Intake_Leak": 1.0
+        }
+      },
+      "client_c": {
+        "client_id": "client_c",
+        "facility_name": "Pune Test Cell",
+        "city": "Pune",
+        "best_model_type": "xgboost",
+        "label": "shared_before",
+        "leak_present_f1": 0.882355516158333,
+        "leak_location_f1": 0.9986709510854478,
+        "leak_severity_f1": 0.9791584780438201,
+        "recommended_action_f1": 0.9791584780438201,
+        "per_scenario_f1": {
+          "Normal": null,
+          "Intake_PreTurbo": 1.0,
+          "Intake_PostTurbo_CAC": 1.0,
+          "Exhaust_PreTurbine": 1.0,
+          "Exhaust_PostTurbine": 1.0,
+          "EGR_Leak": 1.0,
+          "CAC_Direct_Leak": 1.0,
+          "Minor_Intake_Leak": 0.9880239520958084
+        }
+      }
+    },
+    "best_individual": 1.0,
+    "best_client_id": "client_b",
+    "best_facility_name": "Hosur Test Cell 2"
+  },
+  "cross_facility_after": {
+    "leak_location_f1": 0.9965397612646616,
+    "leak_present_f1": 0.8716525959883009,
+    "leak_severity_f1": 0.981615370822829,
+    "per_scenario_f1": {
+      "Normal": null,
+      "Intake_PreTurbo": 1.0,
+      "Intake_PostTurbo_CAC": 1.0,
+      "Exhaust_PreTurbine": 1.0,
+      "Exhaust_PostTurbine": 1.0,
+      "EGR_Leak": 1.0,
+      "CAC_Direct_Leak": 1.0,
+      "Minor_Intake_Leak": 1.0
+    },
+    "model_used": "xgboost_fedavg",
+    "round": 2
+  },
+  "facility_contributions": {
+    "client_a": {
+      "facility": "Hosur Test Cell 1",
+      "city": "Hosur",
+      "client_id": "client_a",
+      "weight_pct": 33.33,
+      "local_test_f1": 1.0
+    },
+    "client_b": {
+      "facility": "Hosur Test Cell 2",
+      "city": "Hosur",
+      "client_id": "client_b",
+      "weight_pct": 41.67,
+      "local_test_f1": 1.0
+    },
+    "client_c": {
+      "facility": "Pune Test Cell",
+      "city": "Pune",
+      "client_id": "client_c",
+      "weight_pct": 25.0,
+      "local_test_f1": 1.0
+    }
+  },
+  "fl_benefit": {
+    "best_individual_cross_facility_f1": 1.0,
+    "global_fl_cross_facility_f1": 0.9965397612646616,
+    "cross_facility_improvement": -0.0034602387353384056,
+    "best_local_own_data_f1": 1.0,
+    "global_local_delta": -0.0034602387353384056
+  },
+  "privacy_stats": {
+    "total_training_samples": 30240,
+    "weights_transmitted_kb_per_round": 93.75,
+    "total_weights_transmitted_kb": 843.75,
+    "raw_data_equivalent_kb": 4725.0,
+    "compression_ratio": 5.6,
+    "raw_data_never_shared": true,
+    "num_rounds": 3,
+    "num_clients": 3
+  },
+  "global_improvement_summary": {
+    "best_local_f1": 1.0,
+    "final_global_f1": 0.9965397612646616,
+    "improvement": -0.0034602387353384056
+  }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Caterpillar Leak Detection">
+  <defs>
+    <linearGradient id="cat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB800"/>
+      <stop offset="100%" stop-color="#FF8C00"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#0a1020"/>
+  <rect width="32" height="32" rx="7" fill="url(#glow)"/>
+  <!-- CAT yellow accent -->
+  <rect x="5" y="6" width="3.5" height="20" rx="1.75" fill="url(#cat)"/>
+  <!-- pressure ring -->
+  <circle cx="18.5" cy="16" r="9.5" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.45"/>
+  <circle cx="18.5" cy="16" r="6.2" fill="none" stroke="#10b981" stroke-width="1.8"/>
+  <!-- engine block -->
+  <rect x="13.5" y="13.2" width="10" height="5.6" rx="1.2" fill="#111827" stroke="#22d3ee" stroke-width="0.9"/>
+  <rect x="15.2" y="14.4" width="2.2" height="3.2" rx="0.4" fill="#1f2937"/>
+  <rect x="18.1" y="14.4" width="2.2" height="3.2" rx="0.4" fill="#1f2937"/>
+  <rect x="20.9" y="14.4" width="2.2" height="3.2" rx="0.4" fill="#1f2937"/>
+  <!-- leak alert -->
+  <circle cx="24.5" cy="10.5" r="2.6" fill="#ef4444"/>
+  <circle cx="24.5" cy="10.5" r="4.2" fill="none" stroke="#ef4444" stroke-width="0.8" opacity="0.55"/>
+</svg>

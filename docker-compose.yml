@@ -1,0 +1,57 @@
+# SENTINEX-CAT — EC2 production (pull images from AWS ECR)
+#
+# Prerequisites on EC2:
+#   - Docker + Docker Compose plugin
+#   - AWS CLI configured (instance role or ~/.aws/credentials)
+#   - .env with SUPABASE_* secrets + ECR_REGISTRY + IMAGE_TAG
+#
+# Deploy:
+#   aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ECR_REGISTRY
+#   docker compose pull
+#   docker compose up -d
+#
+# Or use:  bash scripts/ec2-pull-up.sh
+#
+# Build & push images (from laptop/CI — NOT on EC2):
+#   bash scripts/ecr-build-push.sh
+#
+# Local dev (build locally, no ECR):
+#   docker compose -f docker-compose.local.yml up --build
+
+services:
+  backend:
+    image: ${ECR_REGISTRY}/sentinex-cat-backend:${IMAGE_TAG:-latest}
+    container_name: sentinex-backend
+    env_file:
+      - .env
+    environment:
+      PYTHONPATH: /app/src
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    restart: unless-stopped
+    pull_policy: always
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+
+  frontend:
+    image: ${ECR_REGISTRY}/sentinex-cat-frontend:${IMAGE_TAG:-latest}
+    container_name: sentinex-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    pull_policy: always
+    deploy:
+      resources:
+        limits:
+          memory: 512M

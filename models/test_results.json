@@ -1,0 +1,144 @@
+{
+  "rf": {
+    "macro_f1": 1.0,
+    "micro_f1": 1.0,
+    "sample_f1": 0.9435736677115988,
+    "hamming_loss": 0.0,
+    "multi_leak_f1": 1.0,
+    "multi_leak_precision": 1.0,
+    "multi_leak_recall": 1.0,
+    "normal_detection_f1": 1.0,
+    "per_label": {
+      "CAC_Direct_Leak": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "EGR_Leak": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Exhaust_PostTurbine": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Exhaust_PreTurbine": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Intake_PostTurbo_CAC": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Intake_PreTurbo": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Minor_Intake_Leak": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    }
+  },
+  "xgb": {
+    "macro_f1": 1.0,
+    "micro_f1": 1.0,
+    "sample_f1": 0.9435736677115988,
+    "hamming_loss": 0.0,
+    "multi_leak_f1": 1.0,
+    "multi_leak_precision": 1.0,
+    "multi_leak_recall": 1.0,
+    "normal_detection_f1": 1.0,
+    "per_label": {
+      "CAC_Direct_Leak": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "EGR_Leak": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Exhaust_PostTurbine": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Exhaust_PreTurbine": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Intake_PostTurbo_CAC": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Intake_PreTurbo": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Minor_Intake_Leak": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    }
+  },
+  "nn": {
+    "macro_f1": 1.0,
+    "micro_f1": 1.0,
+    "sample_f1": 0.9435736677115988,
+    "hamming_loss": 0.0,
+    "multi_leak_f1": 1.0,
+    "multi_leak_precision": 1.0,
+    "multi_leak_recall": 1.0,
+    "normal_detection_f1": 1.0,
+    "per_label": {
+      "CAC_Direct_Leak": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "EGR_Leak": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Exhaust_PostTurbine": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Exhaust_PreTurbine": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Intake_PostTurbo_CAC": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Intake_PreTurbo": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "Minor_Intake_Leak": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    }
+  },
+  "best_model": "rf"
+}

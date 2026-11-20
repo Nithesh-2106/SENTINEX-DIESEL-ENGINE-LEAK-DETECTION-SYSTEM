@@ -1,0 +1,4 @@
+model,Leak_Present_accuracy,F1_CAC_Direct_Leak,F1_EGR_Leak,F1_Exhaust_PostTurbine,F1_Exhaust_PreTurbine,F1_Intake_PostTurbo_CAC,F1_Intake_PreTurbo,F1_Minor_Intake_Leak,multilabel_location_f1_macro,Leak_Severity_accuracy,Recommended_Action_accuracy,Leak_Location_accuracy,Leak_Present_AUC
+Random Forest,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+XGBoost,0.999791013584117,1.0,0.9997669540899558,1.0,1.0,1.0,1.0,1.0,0.9999667077271365,1.0,1.0,0.9999667077271365,1.0
+Neural Network,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0

@@ -1,0 +1,496 @@
+/* Official Caterpillar logo — light plate on dark UI */
+
+.cat-brand {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.cat-brand__plate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.cat-brand__logo {
+  display: block;
+  width: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.cat-brand--header .cat-brand__plate {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.cat-brand--header .cat-brand__logo {
+  height: 20px;
+}
+
+.cat-brand--compact .cat-brand__plate {
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.cat-brand--compact .cat-brand__logo {
+  height: 14px;
+}
+
+.cat-brand--login .cat-brand__plate {
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+.cat-brand--login .cat-brand__logo {
+  height: 28px;
+}
+
+/* Login — horizontal co-brand row inside liquid glass box */
+.login-brand-lockup {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.login-brand-liquid-box {
+  width: auto;
+  max-width: min(640px, 94vw);
+  margin: 0 auto;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: var(--login-brand-box-bg);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--login-brand-box-border);
+  box-shadow: var(--login-brand-box-shadow);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.login-brand-liquid-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.09) 0%,
+    transparent 32%,
+    transparent 68%,
+    rgba(13, 184, 240, 0.06) 100%
+  );
+  z-index: 0;
+}
+
+.login-brand-liquid-box::after {
+  content: "";
+  position: absolute;
+  inset: -40% -20%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(13, 184, 240, 0.08) 45%,
+    rgba(0, 212, 168, 0.1) 55%,
+    transparent 100%
+  );
+  transform: translateX(-60%);
+  animation: login-brand-liquid-sheen 7s ease-in-out infinite;
+  z-index: 0;
+}
+
+.login-brand-liquid-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes login-brand-liquid-sheen {
+  0%, 100% { transform: translateX(-65%); opacity: 0.35; }
+  50% { transform: translateX(65%); opacity: 0.75; }
+}
+
+.product-brand-lockup--login {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.product-brand-lockup--login .product-brand-lockup__divider {
+  height: 48px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 205, 0, 0.35),
+    rgba(13, 184, 240, 0.35),
+    transparent
+  );
+}
+
+.product-brand-lockup--login .product-brand-lockup__sentinex {
+  gap: 12px;
+}
+
+.product-brand-lockup--login .product-brand-lockup__text {
+  gap: 2px;
+}
+
+/* SENTINEX shimmer title */
+.sentinex-shimmer-title {
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  background: linear-gradient(
+    110deg,
+    #7dd3fc 0%,
+    #ffffff 18%,
+    #0db8f0 36%,
+    #00d4a8 52%,
+    #ffffff 68%,
+    #818cf8 82%,
+    #0db8f0 100%
+  );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sentinex-title-shimmer 4.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 18px rgba(13, 184, 240, 0.35));
+}
+
+.sentinex-shimmer-title--login {
+  font-size: 36px;
+  letter-spacing: 0.28em;
+  margin-right: -0.28em;
+  filter: drop-shadow(0 0 22px rgba(13, 184, 240, 0.38));
+}
+
+.sentinex-shimmer-title--header {
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  filter: drop-shadow(0 0 12px rgba(13, 184, 240, 0.3));
+}
+
+@keyframes sentinex-title-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.product-brand-lockup__mark--glow .sentinex-live-logo {
+  filter: drop-shadow(0 0 12px rgba(13, 184, 240, 0.45));
+}
+
+.login-tagline {
+  max-width: 560px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.login-tagline__lead {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--login-text-tagline);
+  line-height: 1.2;
+  text-shadow: 0 0 20px rgba(13, 184, 240, 0.12);
+}
+
+.login-tagline__ai {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: linear-gradient(
+    110deg,
+    #7dd3fc 0%,
+    #ffffff 22%,
+    #0db8f0 44%,
+    #00d4a8 58%,
+    #ffffff 72%,
+    #818cf8 88%,
+    #0db8f0 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sentinex-title-shimmer 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 14px rgba(13, 184, 240, 0.3));
+}
+
+.login-ai-quote-wrap {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+  isolation: isolate;
+}
+
+.login-ai-quote-shell {
+  display: inline-grid;
+  max-width: min(92vw, 720px);
+  transition: width 0.22s ease;
+  will-change: width;
+}
+
+.login-ai-quote-shell > .login-ai-quote {
+  grid-area: 1 / 1;
+}
+
+.login-ai-quote {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px clamp(18px, 3vw, 28px);
+  border-radius: 999px;
+  border: 1px solid var(--login-border-medium);
+  text-align: center;
+  max-width: min(92vw, 720px);
+}
+
+.login-ai-quote--measure {
+  visibility: hidden;
+  pointer-events: none;
+  border-color: transparent;
+  padding: 10px clamp(18px, 3vw, 28px);
+}
+
+.login-ai-quote.active {
+  border-color: var(--login-border-hover);
+}
+
+.login-ai-quote__text {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--login-text-quote);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@keyframes login-ai-quote-glow {
+  0%, 100% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 0 rgba(13, 184, 240, 0);
+  }
+  50% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 18px rgba(13, 184, 240, 0.12);
+  }
+}
+
+/* Shared co-brand lockup (header, compact, footer, report) */
+.product-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.product-brand-lockup__divider {
+  width: 1px;
+  flex-shrink: 0;
+  height: 28px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 205, 0, 0.35),
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+}
+
+.product-brand-lockup--compact .product-brand-lockup__divider,
+.product-brand-lockup--footer .product-brand-lockup__divider {
+  height: 22px;
+}
+
+.product-brand-lockup--report .product-brand-lockup__divider {
+  height: 24px;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.15), transparent);
+}
+
+.product-brand-lockup__sentinex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.product-brand-lockup__mark {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.product-brand-lockup__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-brand-lockup__name {
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.1;
+}
+
+.product-brand-lockup--header {
+  gap: 12px;
+  flex-shrink: 0;
+  max-width: min(340px, 30vw);
+}
+
+.product-brand-lockup--header .product-brand-lockup__divider {
+  height: 26px;
+  margin: 0 2px;
+}
+
+.product-brand-lockup--header .product-brand-lockup__sentinex {
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.product-brand-lockup--header .product-brand-lockup__name {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+.product-brand-lockup--header .product-brand-lockup__sub {
+  font-size: 7px;
+  max-width: 210px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-brand-lockup--compact .product-brand-lockup__name,
+.product-brand-lockup--footer .product-brand-lockup__name {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.product-brand-lockup--report .product-brand-lockup__name {
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  color: #0d1b2a;
+}
+
+.product-brand-lockup__sub {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.38);
+  line-height: 1.3;
+}
+
+.product-brand-lockup--footer .product-brand-lockup__sub {
+  font-size: 7px;
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.product-brand-lockup--report .product-brand-lockup__sub {
+  color: rgba(13, 27, 42, 0.55);
+  font-size: 9px;
+}
+
+.sidebar-brand {
+  margin-top: auto;
+  padding: 12px 10px 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.statusbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.login-welcome-brand {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: rgba(1, 3, 8, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.product-brand-lockup--portal {
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 14px;
+  flex-shrink: 0;
+  padding: 0 12px;
+}
+
+.product-brand-lockup--portal .product-brand-lockup__divider {
+  height: 24px;
+  margin: 0 2px;
+}
+
+.product-brand-lockup--portal .product-brand-lockup__sentinex {
+  gap: 10px;
+  min-width: auto;
+  flex-shrink: 0;
+}
+
+.product-brand-lockup--portal .product-brand-lockup__text {
+  min-width: auto;
+  flex-shrink: 0;
+}
+
+.product-brand-lockup--portal .product-brand-lockup__name {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+.product-brand-lockup--portal .product-brand-lockup__mark {
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.product-brand-lockup--portal .sentinex-live-logo {
+  filter: drop-shadow(0 0 8px rgba(13, 184, 240, 0.35));
+}
+
+.product-brand-lockup--portal .cat-brand {
+  flex-shrink: 0;
+}
+
+.tester-console-modal__brand {
+  margin-bottom: 10px;
+}
+
+.report-brand-row {
+  margin-bottom: 12px;
+}
+
+.report-modal-brand {
+  margin-bottom: 4px;
+}

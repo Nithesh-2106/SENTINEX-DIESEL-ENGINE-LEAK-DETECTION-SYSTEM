@@ -1,0 +1,24 @@
+import asyncio
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+async def test_gemini():
+    from google import genai
+    from google.genai import types
+    client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"), http_options={'api_version':'v1beta'})
+    
+    try:
+        response = await client.aio.models.generate_content_stream(
+            model="gemini-2.5-flash",
+            contents="Say hello",
+            config=types.GenerateContentConfig(max_output_tokens=600)
+        )
+        async for chunk in response:
+            print("CHUNK:", chunk.text)
+        print("DONE")
+    except Exception as e:
+        print("EXCEPTION:", e)
+
+asyncio.run(test_gemini())

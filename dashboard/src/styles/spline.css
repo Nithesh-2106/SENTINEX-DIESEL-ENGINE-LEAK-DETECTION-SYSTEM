@@ -1,0 +1,147 @@
+/* ── SPLINE SLOT BASE ── */
+.spline-slot {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── LOGIN PAGE ── */
+.login-orb-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+/* ── DASHBOARD AMBIENT ── */
+.dashboard-ambient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: screen;
+}
+
+/* ── SYSTEM STATUS CORNER VISUAL ── */
+.status-visual-corner {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+/* ── AI DIAGNOSTICS HEADER ART ── */
+.ai-header-art {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: -1px;
+}
+
+/* Compact inline band inside chat toolbar — does not consume a layout row */
+.ai-header-art.ai-header-art-inline {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  margin: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+.chat-toolbar {
+  flex-shrink: 0;
+  min-height: 52px;
+}
+
+.chat-panel-shell {
+  min-height: 0;
+}
+
+.ai-header-art::after,
+.ai-header-art.ai-header-art-inline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ai-header-art::after {
+  background: linear-gradient(
+    180deg,
+    transparent 40%,
+    var(--surface-2, #080d1a) 100%
+  );
+}
+
+.ai-header-art.ai-header-art-inline::after {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 13, 26, 0.92) 0%,
+      rgba(8, 13, 26, 0.35) 18%,
+      rgba(8, 13, 26, 0.15) 50%,
+      rgba(8, 13, 26, 0.35) 82%,
+      rgba(8, 13, 26, 0.92) 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(8, 13, 26, 0.55) 100%
+    );
+}
+
+.ai-header-art-inline canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ── FEDERATED LEARNING VISUAL ── */
+.fl-orbit-visual {
+  width: 100%;
+  height: clamp(200px, 30vh, 360px);
+  position: relative;
+}
+
+/* ── DATA STREAM BACKGROUND ── */
+.data-stream-section-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+
+/* ── LEAK STATE VISUAL (in status card corner) ── */
+.leak-state-visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* ── ANIMATION CLASS UTILITIES ── */
+.spline-fade-in {
+  animation: float-in 1.5s ease both;
+}
+
+.spline-slot canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}

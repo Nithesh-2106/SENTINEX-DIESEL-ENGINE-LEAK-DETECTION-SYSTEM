@@ -1,0 +1,9 @@
+,CAC_Direct_Leak,EGR_Leak,Exhaust_PostTurbine,Exhaust_PreTurbine,Intake_PostTurbo_CAC,Intake_PreTurbo,Minor_Intake_Leak,None
+CAC_Direct_Leak,270,0,0,0,0,0,0,0
+EGR_Leak,0,270,0,0,0,0,0,0
+Exhaust_PostTurbine,0,0,270,0,0,0,0,0
+Exhaust_PreTurbine,0,0,0,270,0,0,0,0
+Intake_PostTurbo_CAC,0,0,0,0,270,0,0,0
+Intake_PreTurbo,0,0,0,0,0,270,0,0
+Minor_Intake_Leak,0,0,0,0,0,0,270,0
+None,0,0,0,0,0,0,0,270

@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Node / frontend
+dashboard/node_modules/
+dashboard/dist/
+
+# Teammate reference archive (local only — not part of main repo)
+teammate_engine_diagram/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Env secrets
+.env
+.env.*
+!.env.example
+dashboard/.env
+
+# Root node_modules (if present)
+node_modules/
+
+# Runtime logs
+*.log
+server.log
+uvicorn.log

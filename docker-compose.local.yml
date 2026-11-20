@@ -1,0 +1,41 @@
+# SENTINEX-CAT — local build (no ECR). Ports 8080 (UI) + 8000 (API).
+# Usage: docker compose -f docker-compose.local.yml up --build
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    image: sentinex-cat-backend:local
+    container_name: sentinex-backend
+    env_file:
+      - .env
+    environment:
+      PYTHONPATH: /app/src
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: dashboard
+      dockerfile: ../docker/frontend/Dockerfile
+      additional_contexts:
+        nginxconf: docker/frontend
+      args:
+        VITE_SUPABASE_URL: ${SUPABASE_URL}
+        VITE_SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+    image: sentinex-cat-frontend:local
+    container_name: sentinex-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
